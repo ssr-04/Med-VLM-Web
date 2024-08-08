@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    background-color: #2f3031;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and Navigation */
+header {
+    margin-bottom: 0;
+}
+
+.navbar {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.5rem;
+    padding: 15px 20px;
+    color: #fff;
+}
+
+.banner img {
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Content */
+.container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+}
+
+.lead {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #007bff;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+ul, ol {
+    padding-left: 1.75rem;
+}
+
+ul li, ol li {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+ul.list-group {
+    padding-left: 0;
+}
+
+.list-group-item {
+    font-size: 1.25rem;
+    border: 1px solid #ddd;
+    padding: 15px 25px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.progress-bar {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Images */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+/* Shadows and Rounding */
+.shadow {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
+
+/* Banner Margin Adjustment */
+.banner {
+    margin-bottom: 30px;
+}
+
+/* Removing default margin/padding to fit design */
+.container-fluid, .content {
+    padding: 0;
+    margin: 0;
+}
+
+/* Footer to stay at the bottom of the page */
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Ensuring full-width navigation and footer */
+.navbar, footer {
+    width: 100%;
+}

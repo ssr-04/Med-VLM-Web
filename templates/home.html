@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="home-content py-5">
+    <div class="container">
+        <h1 class="mb-4 text-center">Welcome to Med-VLM</h1>
+        <p class="lead mb-4">Med-VLM is a cutting-edge project focused on leveraging Vision Transformer Models (VLM) for accurate medical image diagnosis. Our system not only identifies conditions but also provides detailed segmentation and localization of abnormalities in images from the Brain, Liver, Chest X-ray, and Retina, achieving over 90% AUC.</p>
+        
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h2>Aim and Objectives</h2>
+                <p>Our primary goal is to develop a comprehensive AI tool that assists healthcare professionals in making precise diagnoses. The key objectives include:</p>
+                <ul>
+                    <li>Developing a robust Vision Transformer Model for multiple types of medical images</li>
+                    <li>Creating a web interface that allows users to upload medical images and receive diagnosis and analysis</li>
+                    <li>Integrating the model into an end-to-end pipeline that handles the entire process from image upload to detailed report generation</li>
+                </ul>
+            </div>
+            <div class="col-md-6 mb-4">
+                <img src="{{ url_for('static', filename='medical_image_sample.jpeg') }}" alt="Medical Image Sample" class="img-fluid rounded shadow">
+            </div>
+        </div>
+
+        <h2 class="mb-4">Methodology</h2>
+        <p>We follow a comprehensive approach involving:</p>
+        <ol>
+            <li>Data Collection and Preprocessing: Curating a diverse dataset and preparing it for model training.</li>
+            <li>Model Training and Validation: Leveraging state-of-the-art Vision Transformer techniques for robust training and validation.</li>
+            <li>Web Application Development: Integrating the trained model with a seamless web interface for real-time inference.</li>
+        </ol>
+
+        <h2 class="mt-5 mb-4 text-center">Current Focus</h2>
+        <p>We have successfully developed a VLM capable of segmenting, localizing, and categorizing medical images. Our current focus includes:</p>
+        <ul>
+            <li>Exploring alternative approaches for further accuracy and efficiency.</li>
+            <li>Developing models that generate captions for areas with detected abnormalities.</li​>
+        </ul>
+    </div>
+</div>
+{% endblock %}

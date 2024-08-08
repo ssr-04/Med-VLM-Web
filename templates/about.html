@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<div class="about-content py-5">
+    <div class="container">
+        <h1 class="mb-4 text-center">About Us</h1>
+        <p class="lead mb-4 text-center">Meet the dedicated team behind Med-VLM, a project driven by innovation in medical imaging and artificial intelligence.</p>
+        
+        <h2 class="mb-4">Project Team</h2>
+        <ul class="list-group mb-4">
+            <li class="list-group-item">Saravanan G - Project Supervisor</li>
+            <li class="list-group-item">Sachin M Sabariram - Deep Learning and Model Development</li>
+            <li class="list-group-item">Sanjay Vikram C.B - Model Development and Web Development</li>
+            <li class="list-group-item">Monieesh S - Data Science and Machine Learning</li>
+            <li class="list-group-item">Kavin M - Web Development and Machine Learning</li>
+        </ul>
+        
+        <!-- 
+            <div class="text-center">
+            <img src="{{ url_for('static', filename='team_photo.jpg') }}" alt="Project Team" class="img-fluid rounded shadow mb-4">
+        </div>
+        -->
+
+        <h2 class="mt-5">Our Vision</h2>
+        <p>Our vision is to bridge the gap between advanced AI technologies and practical healthcare solutions. By developing powerful tools like Med-VLM, we aim to enhance diagnostic accuracy, reduce workload on medical professionals, and ultimately improve patient outcomes.</p>
+    </div>
+</div>
+{% endblock %}
