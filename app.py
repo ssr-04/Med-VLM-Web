@@ -13,6 +13,8 @@ app.secret_key = 'lv_3000'
 app.config["SESSION_TYPE"] = "filesystem"
 app.config['SESSION_PARMANENT'] = False
 
+url_file = "url.txt"
+
 @app.after_request
 def after_request(response):
   """Ensure responses aren't cached"""
@@ -25,6 +27,30 @@ def after_request(response):
 @app.route('/')
 def home():
     return render_template('home.html')
+
+@app.route('/url',methods=['POST', 'GET'])
+def url():
+  if request.method == 'POST':
+        data = request.get_json()
+        if 'url' in data:
+            url = data['url']
+            # Save the URL to the file
+            with open(url_file, 'w') as file:
+                file.write(url)
+            return jsonify({"message": "URL saved successfully"}), 200
+        else:
+            return jsonify({"error": "No URL provided"}), 400
+    
+    elif request.method == 'GET':
+        try:
+            # Read the URL from the file
+            with open(url_file, 'r') as file:
+                url = file.read()
+            return jsonify({"url": url}), 200
+        except FileNotFoundError:
+            return jsonify({"error": "File not found"}), 404
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
 
 @app.route('/about')
 def about():
