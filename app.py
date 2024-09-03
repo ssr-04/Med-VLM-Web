@@ -6,8 +6,10 @@ from flask import Flask, render_template, request, redirect,jsonify,session
 from werkzeug.utils import secure_filename
 import os
 import random
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 app.secret_key = 'lv_3000'
 
 app.config["SESSION_TYPE"] = "filesystem"
